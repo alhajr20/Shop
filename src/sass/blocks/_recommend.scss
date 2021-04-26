@@ -1,0 +1,123 @@
+.recommend {
+    margin-top: 30px;
+    &__mainWrapper {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px;
+    }
+    &__tabs {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__wrapper {
+        margin-top: 30px;
+    }
+    &__tabContent {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__tab {
+        background-color: $main-color;
+        color: #fff;
+        padding: 5px 20px;
+        margin-left: 30px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all .5s;
+        outline: none;
+    }
+    &__tab-active {
+        color: $main-color;
+        background-color: $bg-color;
+    }
+    .hideTab {
+        display: none;
+    }
+    .showTab {
+        display: flex;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        width: 270px;
+        min-height: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+        border-radius: 15px;
+        padding: 20px;
+        &-top {
+            display: flex;
+            justify-content: flex-end;
+            a {
+                svg {
+                    stroke: $main-color;
+                    transition: all .2s;
+                }
+                &:hover {
+                    svg {
+                        stroke: red;
+                        fill: red;
+                    }
+                }
+            }
+        }
+        figure {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            a {
+                display: block;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+            figcaption {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 10px;
+                span {
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+            }
+            .name {
+                display: inline;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+                text-decoration: none;
+                color: $main-color;
+            }
+        }
+        &-descr {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-top: 10px;
+            button {
+                background-color: $main-color;
+                border: none;
+                color: #fff;
+                padding: 5px 20px;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                border-radius: 100%;
+                border: 1px solid $main-color;
+                svg {
+                    stroke: $main-color;
+                }
+            }
+        }
+    }
+}

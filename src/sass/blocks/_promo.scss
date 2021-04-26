@@ -72,8 +72,21 @@
                     text-decoration: none;
                     transition: all .5s;
                     &:hover {
-                        background-color: $bg-color;
+                        background-color: $main-color;
+                        color: #fff;
                     }
+                }
+            }
+            li:first-child {
+                a {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+            }
+            li:last-child {
+                a {
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
                 }
             }
         }

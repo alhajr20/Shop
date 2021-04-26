@@ -87,4 +87,43 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     window.setInterval(moveSlider, 4000);
+
+    // TABS
+
+    let tabs = document.querySelectorAll('.recommend__tab'),
+        tabsContent = document.querySelectorAll('.recommend__tabContent'),
+        tabsParent = document.querySelector('.recommend__tabs');
+
+	function hideTabContent() {
+        
+        tabsContent.forEach(item => {
+            item.classList.add('hideTab');
+            item.classList.remove('showTab');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('recommend__tab-active');
+        });
+	}
+
+	function showTabContent(i = 0) {
+        tabs[i].classList.add('recommend__tab-active');
+        tabsContent[i].classList.add('showTab');
+        tabsContent[i].classList.remove('hideTab');
+    }
+    
+    hideTabContent();
+    showTabContent();
+
+	tabsParent.addEventListener('click', function(event) {
+		const target = event.target;
+		if(target && target.classList.contains('recommend__tab')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+		}
+    });
 });

@@ -13,5 +13,10 @@ body {
     background-color: $bg-color;
 }
 
+a {
+    text-decoration: none;
+}
+
 @import './blocks/header';
 @import './blocks/promo';
+@import './blocks/recommend';
