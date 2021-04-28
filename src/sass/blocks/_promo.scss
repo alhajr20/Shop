@@ -2,14 +2,17 @@
     min-height: 500px;
     margin-top: 30px;
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 22% 50% 22%;
+        grid-template-rows: 400px;
+        grid-template-rows: min-content;
         justify-content: space-between;
     }
     &__middle {
-        width: 50%;
+        // width: 50%;
         border-radius: 15px;
         figure {
-            height: 100%;
+            height: 550px;
             border-radius: 15px;
             img {
                 width: 100%;
@@ -53,9 +56,9 @@
         }
     }
     &__left, &__right {
+        // width: 22%;
         border-radius: 15px;
         background-color: #fff;
-        width: 22%;
     }
     &__left {
         ul {
@@ -72,21 +75,8 @@
                     text-decoration: none;
                     transition: all .5s;
                     &:hover {
-                        background-color: $main-color;
-                        color: #fff;
+                        color: $bg-color;
                     }
-                }
-            }
-            li:first-child {
-                a {
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                }
-            }
-            li:last-child {
-                a {
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
                 }
             }
         }
@@ -95,11 +85,12 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         figure {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 30px;
             img {
                 width: 80%;
             }

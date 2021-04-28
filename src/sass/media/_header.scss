@@ -1,0 +1,95 @@
+@media screen and (max-width: 992px) {
+    .header {
+        &__top {
+            &-wrapper {
+                grid-template-columns: 75px 3fr;
+            }
+        }
+        &__search, &__contact, &__account {
+            display: none;
+        }
+        .nav {
+            &__priority {
+                ul {
+                    li {
+                        a {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .header {
+        .nav {
+            &__priority {
+                ul {
+                    li {
+                        &:not(:first-child) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__mobile {
+                display: block;
+                width: 50%;
+                position: fixed;
+                top: 0;
+                left: -500px;
+                height: 100%;
+                background-color: #fff;
+                z-index: 5;
+                transition: all .5s;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    list-style: none;
+                    height: 100%;
+                    li {
+                        a {
+                            display: block;
+                            padding: 10px 10px 10px 20px;
+                            border-bottom: 1px solid $bg-color;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+            .mobileActive {
+                transform: translateX(500px);
+            }
+            &__listHead {
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                height: 5rem;
+                border-bottom: .1rem solid $bg-color;
+                .close {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 5rem;
+                    height: 5rem;
+                    border: none;
+                    background: $bg-color;
+                    padding: 0;
+                    text-align: center;
+                    line-height: 7rem;
+                    cursor: pointer;
+                    transition: .25s;
+                }
+                strong {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}

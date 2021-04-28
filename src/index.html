@@ -15,47 +15,39 @@
         <header class="header">
             <div class="header__top">
                 <div class="container">
-                    <div class="row">
-                        <div class="col col-xl-2">
-                            <div class="header__logo">
-                                <a href="/">
-                                    <img src="./img/shopLogo.png" title="Shop's logo" alt="logo shop">
-                                </a>
+                    <div class="header__top-wrapper">
+                        <div class="header__logo">
+                            <a href="/">
+                                <img src="./img/shopLogo.png" title="Shop's logo" alt="logo shop">
+                            </a>
+                        </div>
+                        <div class="header__search">
+                            <button class="loupe">
+                                <img src="./icons/loupe.svg" title="Let's find" alt="loupe">
+                            </button>
+                            <div class="wrapper">
+                                <input type="search" name="search" placeholder="Let's find" autocomplete="off">
                             </div>
                         </div>
-                        <div class="col-hidden col-xl-4">
-                            <div class="header__search">
-                                <button class="loupe">
-                                    <img src="./icons/loupe.svg" title="Let's find" alt="loupe">
-                                </button>
-                                <div class="wrapper">
-                                    <input type="search" name="search" placeholder="Let's find" autocomplete="off">
+                        <div class="header__contact">
+                            <a href="tel:+79287888859" class="phone">+7 (928) 788 88-59</a>
+                            <button class="modal">Message us</button>
+                        </div>
+                        <div class="rightWrapper">
+                            <div class="col-auto">
+                                <div class="header__account">
+                                    <button>
+                                        <img src="./icons/account.svg" title="Your account" alt="account icon">
+                                        Account
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-hidden col-xl-3">
-                            <div class="header__contact">
-                                <a href="tel:+79287888859" class="phone">+7 (928) 788 88-59</a>
-                                <button class="modal">Message us</button>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="row rightWrapper">
-                                <div class="col-auto">
-                                    <div class="header__account">
-                                        <button>
-                                            <img src="./icons/account.svg" title="Your account" alt="account icon">
-                                            Account
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="header__basket">
-                                        <button>
-                                            <img src="./icons/add-to-basket.svg" title="Add to basket" alt="basket icon">
-                                            Cart
-                                        </button>
-                                    </div>
+                            <div class="col-auto">
+                                <div class="header__basket">
+                                    <button>
+                                        <img src="./icons/add-to-basket.svg" title="Add to basket" alt="basket icon">
+                                        Cart
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -64,9 +56,32 @@
             </div>
             <nav class="nav">
                 <div class="container">
-                    <div class="nav__prioripy">
+                    <div class="nav__priority">
                         <ul>
-                            <li><a href="#">All Category</a></li>
+                            <li>
+                                <a href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </li>
+                            <li><a href="#">Electronic</a></li>
+                            <li><a href="#">Smartphones</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Processors</a></li>
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#">Smart watch</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__mobile">
+                        <div class="nav__listHead">
+                            <button class="close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                            </button>
+                            <strong>Categories</strong>
+                        </div>
+                        <ul>
                             <li><a href="#">Electronic</a></li>
                             <li><a href="#">Smartphones</a></li>
                             <li><a href="#">Laptops</a></li>

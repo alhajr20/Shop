@@ -13,9 +13,13 @@
         margin-top: 30px;
     }
     &__tabContent {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+        grid-template-rows: min-content;
+        grid-auto-rows: min-content;
+        justify-content: center;
+        justify-items: center;
+        gap: 50px;
     }
     &__tab {
         background-color: $main-color;
@@ -36,7 +40,7 @@
         display: none;
     }
     .showTab {
-        display: flex;
+        display: grid;
     }
     &__item {
         display: flex;
@@ -45,9 +49,9 @@
         width: 270px;
         min-height: 100%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        margin-top: 50px;
         border-radius: 15px;
         padding: 20px;
+
         &-top {
             display: flex;
             justify-content: flex-end;

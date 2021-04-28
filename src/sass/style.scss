@@ -1,5 +1,5 @@
 @import './base/variables';
-@import './libs/bootstrap';
+// @import './libs/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 * {
@@ -17,6 +17,13 @@ a {
     text-decoration: none;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 @import './blocks/header';
 @import './blocks/promo';
 @import './blocks/recommend';
+
+@import './media';
