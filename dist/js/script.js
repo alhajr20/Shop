@@ -1,4 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
+    // MOBILE MENU
+    const menu = document.querySelector('.nav__mobile'),
+          openBtn = document.querySelector('.hamburger'),
+          closeBtn = document.querySelector('button.close');
+
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        menu.classList.add('mobileActive');
+    });
+
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        menu.classList.remove('mobileActive');
+    });
+    // MOBILE MENU END
+
+    // SLIDER
     let offset = 0;
     let slideIndex = 1;
     
@@ -87,9 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     window.setInterval(moveSlider, 4000);
+    // SLIDER END
 
     // TABS
-
     let tabs = document.querySelectorAll('.recommend__tab'),
         tabsContent = document.querySelectorAll('.recommend__tabContent'),
         tabsParent = document.querySelector('.recommend__tabs');
@@ -126,4 +143,5 @@ window.addEventListener('DOMContentLoaded', () => {
             });
 		}
     });
+    // TABS END
 });

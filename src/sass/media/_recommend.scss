@@ -1,0 +1,49 @@
+@media screen and (max-width: 940px) {
+    .recommend {
+        &__tabs {
+            margin-top: 50px;
+        }
+        &__tab {
+            padding: 5px 15px;
+            margin-left: 15px;
+            margin: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .recommend {
+        &__tabs {
+            flex-wrap: wrap;
+        }
+        &__tab {
+            padding: 5px 15px;
+            margin-left: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .recommend {
+        &__tabContent {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(10rem, auto));
+            grid-template-rows: min-content;
+            grid-auto-rows: min-content;
+            justify-content: center;
+            justify-items: center;
+            gap: 50px;
+        }
+        &__item {
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .recommend {
+        &__item {
+            width: 180px;
+        }
+    }
+}

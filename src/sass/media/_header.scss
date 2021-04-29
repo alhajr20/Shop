@@ -5,7 +5,7 @@
                 grid-template-columns: 75px 3fr;
             }
         }
-        &__search, &__contact, &__account {
+        &__search, &__contact {
             display: none;
         }
         .nav {
@@ -22,16 +22,56 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 992px) {
     .header {
+        &__account {
+            display: none;
+        }
         .nav {
             &__priority {
+                display: flex;
+                justify-content: space-between;
                 ul {
                     li {
                         &:not(:first-child) {
                             display: none;
                         }
                     }
+                    li:first-child {
+                        display: flex;
+                        align-items: center;
+                        a {
+                            display: none;
+                        }
+                        a.hamburger {
+                            display: block;
+                            span {
+                                display: block;
+                                width: 26px;
+                                height: 2px;
+                                background-color: $main-color;
+    
+                                &:not(:last-child) {
+                                    margin-bottom: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mobileRight {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    button {
+                        background: none;
+                        border: none;
+                    }
+                    .mobileSearch {
+                        margin-right: 20px;
+                    }
+                }
+                .mobileAccount {
+                    display: block;
                 }
             }
             &__mobile {
@@ -65,8 +105,8 @@
             &__listHead {
                 display: flex;
                 align-items: center;
-                padding-left: 20px;
-                height: 5rem;
+                padding: 0 80px 0 20px;
+                height: 4rem;
                 border-bottom: .1rem solid $bg-color;
                 .close {
                     display: flex;
@@ -76,8 +116,8 @@
                     position: absolute;
                     top: 0;
                     right: 0;
-                    width: 5rem;
-                    height: 5rem;
+                    width: 4rem;
+                    height: 4rem;
                     border: none;
                     background: $bg-color;
                     padding: 0;
@@ -87,7 +127,29 @@
                     transition: .25s;
                 }
                 strong {
-                    font-size: 1.8rem;
+                    display: block;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .header {
+        .nav {
+            &__mobile {
+                width: 65%;
+            }
+            &__listHead {
+                height: 3rem;
+                .close {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                strong {
+                    display: block;
+                    font-size: 1.1rem;
                 }
             }
         }
