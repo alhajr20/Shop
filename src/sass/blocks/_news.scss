@@ -1,0 +1,38 @@
+.news {
+    margin-top: 30px;
+    a {
+        color: $main-color;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__wrapper {
+        padding: 30px;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+    &__item {
+        padding: 30px;
+        background-color: $bg-color;
+        border-radius: 15px;
+        margin-top: 30px;
+        a {
+            figure {
+                display: grid;
+                grid-template-columns: 30% 67%;
+                grid-template-rows: 200px;
+                column-gap: 30px;
+                figcaption {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    p {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
