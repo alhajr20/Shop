@@ -1,6 +1,13 @@
 @media screen and (max-width: 992px) {
     .news {
+        &__items {
+            display: grid;
+            grid-template-columns: 47% 47%;
+            grid-template-rows: min-content;
+            justify-content: space-between;
+        }
         &__item {
+            padding: 20px;
             a {
                 figure {
                     grid-template-columns: 98%;
@@ -20,6 +27,19 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    @media screen and (max-width: 992px) {
+        .news {
+            &__items {
+                grid-template-columns: 100%;
+            }
+            &__item {
+                padding: 20px;
             }
         }
     }
