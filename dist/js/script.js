@@ -144,4 +144,15 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
     });
     // TABS END
+    
+    // CHATS BTN
+    const toggle = document.querySelector('button.toggle')
+          chatsOpenBtn = toggle.querySelector('.open'),
+          chatsCloseBtn = toggle.querySelector('.close');
+
+    toggle.addEventListener('click', (e) => {
+        const elem = e.target.parentNode;
+
+        console.log(elem.classList);
+    });
 });
