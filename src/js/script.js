@@ -146,13 +146,25 @@ window.addEventListener('DOMContentLoaded', () => {
     // TABS END
     
     // CHATS BTN
-    const toggle = document.querySelector('button.toggle')
-          chatsOpenBtn = toggle.querySelector('.open'),
-          chatsCloseBtn = toggle.querySelector('.close');
+    const chatsOpenBtn = document.querySelector('.open'),
+          chatsCloseBtn = document.querySelector('.close'),
+          dropdown = document.querySelector('.dropdown');
 
-    toggle.addEventListener('click', (e) => {
-        const elem = e.target.parentNode;
+    chatsOpenBtn.addEventListener('click', () => {
+        chatsOpenBtn.classList.add('btn-hide');
+        chatsOpenBtn.classList.remove('btn-active');
+        chatsCloseBtn.classList.add('btn-active');
+        chatsCloseBtn.classList.remove('btn-hide');
+        dropdown.style.display = 'flex';
+        dropdown.classList.add('fadeIn');
+    });
 
-        console.log(elem.classList);
+    chatsCloseBtn.addEventListener('click', () => {
+        chatsOpenBtn.classList.add('btn-active');
+        chatsOpenBtn.classList.remove('btn-hide');
+        chatsCloseBtn.classList.add('btn-hide');
+        chatsCloseBtn.classList.remove('btn-active');
+        dropdown.style.display = 'none';
+        dropdown.classList.remove('fadeIn');
     });
 });
