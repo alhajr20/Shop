@@ -24,8 +24,8 @@
 }
 
 @media screen and (max-width: 450px) {
-    .recommend {
-        &__tabContent {
+    .recommend, .newItems {
+        &__tabContent, .newItems__wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(10rem, auto));
             grid-template-rows: min-content;
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 320px) {
-    .recommend {
+    .recommend, .newItems {
         &__item {
             width: 180px;
         }
