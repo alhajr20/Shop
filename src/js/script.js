@@ -167,4 +167,58 @@ window.addEventListener('DOMContentLoaded', () => {
         dropdown.style.display = 'none';
         dropdown.classList.remove('fadeIn');
     });
+    // CHATS BTN END
+
+    // SHOW UP BTN
+    const upBtn = document.querySelector('.up');
+
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 150) {
+            upBtn.classList.add('upShow');
+        } else {
+            upBtn.classList.remove('upShow');
+        }
+    });
+    // SHOW UP BTN END
+    
+    // SLOW LINKS
+    let links = document.querySelectorAll('[href^="#"]'),
+        speed = 0.3;
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let widthTop = document.documentElement.scrollTop,
+                hash = this.hash,
+                toBlock = document.querySelector(hash).getBoundingClientRect().top,
+
+                start = null;
+            requestAnimationFrame(step);
+
+            function step(time) {
+                if (start === null) {
+                    start = time;
+                }
+
+                let progress = time - start,
+                    r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
+
+                    document.documentElement.scrollTo(0, r);
+
+                if (r != widthTop + toBlock) {
+                    requestAnimationFrame(step);
+                } else {
+                    location.hash = hash;
+                }
+            }
+        });
+    });
+
+    upBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        window.scrollTo(pageXOffset, 0);
+    });
+    // SLOW LINKS END
 });

@@ -101,6 +101,20 @@ a {
     }
 }
 
+.up {
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    padding: 15px;
+    background-color: #393F50;
+    display: none;
+    align-items: center;
+}
+
+.upShow {
+    display: flex;
+}
+
 @import './blocks/header';
 @import './blocks/promo';
 @import './blocks/recommend';
