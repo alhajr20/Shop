@@ -90,9 +90,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 30px;
+            justify-content: space-around;
+            height: 100%;
+            margin-top: 50px;
             img {
-                width: 80%;
+                width: 70%;
             }
             figcaption {
                 margin-top: 10px;
@@ -100,6 +102,19 @@
                     a {
                         color: $main-color;
                         text-decoration: none;
+                    }
+                }
+                .buy {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    button {
+                        background-color: $main-color;
+                        border: none;
+                        color: #fff;
+                        padding: 5px 20px;
+                        border-radius: 15px;
+                        cursor: pointer;
                     }
                 }
             }
