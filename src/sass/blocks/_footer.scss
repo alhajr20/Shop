@@ -28,6 +28,15 @@
             ul {
                 list-style: none;
                 margin-top: 30px;
+                li {
+                    a {
+                        color: rgb(133, 133, 133);
+                        transition: all .3s ease;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
             }
         }
     }
