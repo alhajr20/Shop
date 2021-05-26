@@ -93,12 +93,38 @@
                 justify-content: space-between;
                 li {
                     position: relative;
+                    cursor: pointer;
                     a {
                         color: $main-color;
                         text-decoration: none;
                         transition: all .5s;
                         &:hover {
                             color: #626775;
+                        }
+                    }
+                }
+                li:first-child {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    ul {
+                        display: none;
+                        transition: all .5s;
+                        opacity: 0;
+                        transform: translateY(-100px);
+                    }
+                    &:hover {
+                        ul {
+                            display: block;
+                            position: absolute;
+                            top: 150%;
+                            left: 0;
+                            flex-direction: column;
+                            background-color: #fff;
+                            min-height: 300px;
+                            padding: 20px 50px;
+                            opacity: 1;
+                            transform: translateY(0px);
                         }
                     }
                 }
