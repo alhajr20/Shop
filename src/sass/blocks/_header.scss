@@ -108,27 +108,66 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    ul {
+                    .dropdown {
                         display: none;
-                        transition: all .5s;
-                        opacity: 0;
-                        transform: translateY(-100px);
                     }
                     &:hover {
-                        ul {
+                        .dropdown {
                             display: block;
                             position: absolute;
+                            border: 1px solid grey;
                             top: 100%;
                             left: 0;
-                            flex-direction: column;
-                            background-color: rgb(248, 248, 248);
-                            min-height: 300px;
-                            opacity: 1;
-                            transform: translateY(0px);
-                            li {
-                                padding: 1rem 4rem 1rem 1.5rem;
-                                &:hover {
-                                    background-color: $bg-color;
+                            ul {
+                                flex-direction: column;
+                                background-color: rgb(248, 248, 248);
+                                min-height: 300px;
+                                opacity: 1;
+                                transform: translateY(0px);
+                                li {
+                                    padding: 1rem 4rem 1rem 1.5rem;
+                                }
+                                .dropdown__btn {
+                                    position: relative;
+
+                                    .dropdown__second {
+                                        display: none;
+                                        width: 1200px;
+                                        position: absolute;
+                                        padding: 30px;
+                                        top: 0;
+                                        left: 100%;
+                                        background-color: #fff;
+                                    }
+                                    
+                                    &:hover {
+                                        .dropdown__second {
+                                            display: block;
+                                            z-index: 15;
+                                            border: 1px solid grey;
+                                            &-wrapper {
+                                                display: grid;
+                                                grid-template-columns: 1fr 1fr 1fr;
+                                            }
+                                            &-block {
+                                                & > a {
+                                                    font-size: 1.5rem;
+                                                }
+                                                ul {
+                                                    background-color: #fff;
+                                                    justify-content: flex-start;
+                                                    li {
+                                                        padding: 0;
+                                                        font-size: 14px;
+                                                        margin-top: 20px;
+                                                    }
+                                                    li:first-child {
+                                                        margin-top: 30px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
