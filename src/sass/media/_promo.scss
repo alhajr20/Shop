@@ -3,6 +3,7 @@
         &__wrapper {
             display: grid;
             grid-template-columns: 70% 28%;
+            row-gap: 30px;
         }
         &__middle {
             grid-column-start: 1;
@@ -17,7 +18,18 @@
             grid-row-end: 1;
         }
         &__right {
-            display: none;
+            align-items: flex-start;
+            grid-column: 1 / 3;
+            h2 {
+                font-size: 20px;
+                text-align: left;
+            }
+            figure {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 30% 50%;
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -43,6 +55,18 @@
             img {
                 width: 40px;
                 height: 40px;
+            }
+        }
+        &__right {
+            align-items: flex-start;
+            grid-column: 1 / 3;
+            h2 {
+                text-align: left;
+            }
+            figure {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 30% 50%;
             }
         }
     }
