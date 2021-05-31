@@ -115,12 +115,13 @@
                         .dropdown {
                             display: block;
                             position: absolute;
-                            border: 1px solid grey;
+                            border: 1px solid $bg-color;
+                            box-shadow: 0 0 10px $bg-color;
                             top: 100%;
                             left: 0;
                             ul {
                                 flex-direction: column;
-                                background-color: rgb(248, 248, 248);
+                                background-color: #fff;
                                 min-height: 300px;
                                 opacity: 1;
                                 transform: translateY(0px);
@@ -139,12 +140,18 @@
                                         left: 100%;
                                         background-color: #fff;
                                     }
+
+                                    svg {
+                                        position: absolute;
+                                        right: 10%;
+                                    }
                                     
                                     &:hover {
                                         .dropdown__second {
                                             display: block;
                                             z-index: 15;
-                                            border: 1px solid grey;
+                                            border: 1px solid $bg-color;
+                                            box-shadow: 0 0 10px $bg-color;
                                             &-wrapper {
                                                 display: grid;
                                                 grid-template-columns: 1fr 1fr 1fr;
