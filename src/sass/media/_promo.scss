@@ -108,6 +108,29 @@
                 height: 250px;
             }
         }
+
+        &__right {
+            padding: 20px;
+            figure {
+                figcaption {
+                    h3 {
+                        a {
+                            font-size: 0.875rem;
+                        }
+                    }
+                    .buy {
+                        align-items: center;
+                        margin-top: 10px;
+                        span {
+                            font-size: 0.800rem;
+                        }
+                        button {
+                            padding: 5px 15px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
