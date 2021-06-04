@@ -65,7 +65,54 @@
         }
     }
     &__account {
+        position: relative;
         margin-right: 30px;
+        button {
+            outline: none;
+        }
+        &-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: 200px;
+            background-color: #fff;
+            border: 1px solid $bg-color;
+            box-shadow: 0 0 10px $bg-color;
+            z-index: 5;
+            ul {
+                list-style: none;
+                li {
+                    padding: 10px 20px;
+                    transition: all .3s;
+                    &:hover {
+                        background-color: $bg-color;
+                    }
+                    a {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        &-active {
+            display: block;
+        }
+    }
+    &__basket {
+        position: relative;
+        &-value {
+            position: absolute;
+            top: -15%;
+            right: -15%;
+            background-color: $bg-color;
+            color: $main-color;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     &__account, &__basket {
         button {
@@ -84,9 +131,7 @@
     }
     .nav {
         background-color: #fff;
-        // box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
         &__priority {
-            // padding: 15px 0;
             ul {
                 list-style: none;
                 display: flex;

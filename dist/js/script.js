@@ -221,4 +221,13 @@ window.addEventListener('DOMContentLoaded', () => {
         window.scrollTo(pageXOffset, 0);
     });
     // SLOW LINKS END
+
+    // Account dropdown
+    const accountBtn = document.querySelector('.header__account button'),
+          dropdownElem = document.querySelector('.header__account-dropdown');
+    
+    accountBtn.addEventListener('click', () => {
+        dropdownElem.classList.toggle('header__account-active');
+    });
+    // Account dropdown end
 });
