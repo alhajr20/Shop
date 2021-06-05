@@ -115,6 +115,72 @@ a {
     display: flex;
 }
 
+.form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.233);
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 30px;
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        input, textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid $bg-color;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+            outline: none;
+            margin-top: 20px;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            text-transform: uppercase;
+            padding: 15px 20px;
+            border: none;
+            background-color: $main-color;
+            color: #fff;
+            cursor: pointer;
+            transition: all .5s;
+            margin-top: 20px;
+            &:hover {
+                background-color: rgb(199, 199, 199);
+                color: $main-color;
+                border: 1px solid $bg-color;
+                box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+            }
+        }
+    }
+
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -5%;
+        right: -8%;
+        height: 35px;
+        font-size: 50px;
+        color: $main-color;
+        z-index: 50;
+        cursor: pointer;
+    }
+}
+
+.form-active {
+    display: block;
+    z-index: 5;
+}
+
 @import './blocks/header';
 @import './blocks/promo';
 @import './blocks/recommend';

@@ -230,4 +230,25 @@ window.addEventListener('DOMContentLoaded', () => {
         dropdownElem.classList.toggle('header__account-active');
     });
     // Account dropdown end
+
+    // Modal window
+    const overlayWindow = document.querySelector('.form'),
+          modalBtns = document.querySelectorAll('button.modal'),
+          modalCloseBtn = document.querySelector('.form__close'),
+          modalWindow = document.querySelector('.form form');
+
+    modalBtns.forEach(item => {
+        item.addEventListener('click', () => {
+            overlayWindow.classList.add('form-active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    overlayWindow.addEventListener('click', (e) => {
+        if (e.target === overlayWindow || e.target === modalCloseBtn) {
+            overlayWindow.classList.remove('form-active');
+            document.body.style.overflow = 'visible';
+        }
+    });
+    // Modal window end
 });
