@@ -1,3 +1,14 @@
+@media screen and (max-width: 1250px) {
+    .header {
+        &__contact {
+            flex-direction: column;
+            a {
+                order: -1;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .header {
         &__top {

@@ -88,11 +88,14 @@
             button {
                 border: none;
                 background: none;
-                color: #fff;
+                color: $main-color;
+                padding: 5px 20px;
+                background-color: $bg-color;
                 cursor: pointer;
                 outline: none;
                 transition: all .5s;
                 font-size: 1rem;
+                margin-top: 10px;
                 &:hover {
                     color: rgb(202, 202, 202);
                 }

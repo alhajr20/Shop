@@ -41,8 +41,9 @@
     }
     &__contact {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-around;
         a {
             color: #fff;
             text-decoration: none;
@@ -52,9 +53,12 @@
             }
         }
         button {
+            order: -1;
             border: none;
             background: none;
-            color: #fff;
+            color: $main-color;
+            padding: 5px 20px;
+            background-color: $bg-color;
             cursor: pointer;
             outline: none;
             transition: all .5s;
