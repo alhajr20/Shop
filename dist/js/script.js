@@ -251,4 +251,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
     // Modal window end
+
+    const cartBtn = document.querySelector('.header__basket button'),
+          cartClose = document.querySelector('.cart-shop__head button'),
+          cartShop = document.querySelector('.cart-shop');
+
+    cartBtn.addEventListener('click', () => {
+        cartShop.classList.add('cart-shop-active');
+    });
+
+    cartClose.addEventListener('click', () => {
+        cartShop.classList.remove('cart-shop-active');
+    });
 });
