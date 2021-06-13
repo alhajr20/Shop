@@ -257,6 +257,102 @@ a {
         }
     }
 
+    &__item {
+        display: grid;
+        grid-template-columns: 70px 230px 50px;
+        column-gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $bg-color;
+        padding: 2rem;
+
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            a {
+                h3 {
+                    color: $main-color;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+
+        .counter {
+            display: flex;
+            justify-content: flex-start;
+            input {
+                width: 50%;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 2rem;
+                color: $main-color;
+                background-color: $bg-color;
+                text-align: center;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            .plus, .minus {
+                padding-right: 5px;
+                padding-left: 5px;
+                cursor: pointer;
+                border: none;
+                background-color: $bg-color;
+            }
+
+            .minus {
+                background-color: $bg-color;
+                order: -1;
+            }
+        }
+    }
+
+    &__delete {
+        display: block;
+        margin: 0 auto;
+        width: 25px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s;
+
+        &:active {
+            svg {
+                stroke: red;
+            }
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 10px 0 20px;
+
+        p {
+            strong {
+                font-size: 20px;
+            }
+        }
+    }
+
     &__footer {
         display: flex;
         justify-content: space-around;
