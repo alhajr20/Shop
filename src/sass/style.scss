@@ -283,6 +283,10 @@ a {
         }
     }
 
+    .mobile-price {
+        display: none;
+    }
+
     &__price {
         display: flex;
         justify-content: space-between;
@@ -344,7 +348,7 @@ a {
     &__total {
         display: flex;
         justify-content: flex-end;
-        padding: 20px 10px 0 20px;
+        padding: 2rem;
 
         p {
             strong {
@@ -383,6 +387,37 @@ a {
 
 .cart-shop-active {
     right: 0;
+}
+
+@media screen and (max-width: 570px) {
+    .cart-shop {
+        width: 100%;
+
+        &__item {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: auto auto auto;
+
+            img {
+                width: 70px;
+            }
+        }
+
+        &__price {
+            display: none;
+        }
+
+        .mobile-price {
+            display: flex;
+            justify-content: flex-start;
+            grid-column: 1 / 4;
+            margin-top: 20px;
+
+            .counter {
+                margin-left: 50px;
+            }
+        }
+    }
 }
 
 @import './blocks/header';
