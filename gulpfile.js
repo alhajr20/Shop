@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const babel = require('gulp-babel');
 // const webpack = require('webpack');
 // const webpackStream = require('webpack-stream');
 // const webpackConfig = require('./webpack.config');
@@ -48,6 +49,9 @@ gulp.task('html', function () {
 
 gulp.task('scripts', function () {
     return gulp.src("src/js/**/*.js")
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 });
