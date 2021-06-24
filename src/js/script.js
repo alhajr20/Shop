@@ -263,4 +263,29 @@ window.addEventListener('DOMContentLoaded', () => {
     cartClose.addEventListener('click', () => {
         cartShop.classList.remove('cart-shop-active');
     });
+
+    const showPreviewBtn = document.querySelectorAll('.open-review'),
+          closePreviewBtn = document.querySelector('.preview-modal__close button'),
+          previewModal = document.querySelector('.preview');
+
+    showPreviewBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            previewModal.classList.add('show-preview');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    previewModal.addEventListener('click', (e) => {
+        if (e.target === previewModal) {
+            previewModal.classList.remove('show-preview');
+            document.body.style.overflow = 'visible';
+        }
+    });
+
+    closePreviewBtn.addEventListener('click', () => {
+        previewModal.classList.remove('show-preview');
+        document.body.style.overflow = 'visible';
+    });
 });
