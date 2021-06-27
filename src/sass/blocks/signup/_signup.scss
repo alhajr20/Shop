@@ -4,12 +4,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
 
         form {
             background-color: #fff;
             padding: 30px;
-            width: 60%;
+            width: 70%;
             .inputs-block {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -67,6 +67,19 @@
                         border: none;
                         cursor: auto;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .sign-up {
+        .container {
+            form {
+                width: 100%;
+                .inputs-block {
+                    grid-template-columns: 100%;
                 }
             }
         }
