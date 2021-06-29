@@ -4,7 +4,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        padding: 50px 0;
 
         form {
             background-color: #fff;
@@ -38,6 +38,13 @@
                     a {
                         color: #00C2F2;
                     }
+                }
+            }
+            .auth-link {
+                margin-top: 30px;
+                a {
+                    font-size: 12px;
+                    color: grey;
                 }
             }
             button {
@@ -80,6 +87,18 @@
                 width: 100%;
                 .inputs-block {
                     grid-template-columns: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sign-up {
+        .container {
+            form {
+                button {
+                    width: 50%;
                 }
             }
         }
