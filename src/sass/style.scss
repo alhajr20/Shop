@@ -141,6 +141,15 @@ a {
             outline: none;
             margin-top: 20px;
         }
+        .privacy-policy {
+            display: flex;
+            align-items: center;
+            label {
+                input {
+                    width: auto;
+                }
+            }
+        }
         textarea {
             resize: none;
         }
