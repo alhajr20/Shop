@@ -237,6 +237,7 @@ a {
     background-color: #fff;
     min-width: 395px;
     transition: all .5s;
+    z-index: 5;
     
     &__head {
         display: flex;
