@@ -250,3 +250,33 @@
         }
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .product {
+        &__wrapper {
+            grid-template-columns: 45% 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .product {
+        &__wrapper {
+            grid-template-columns: 100%;
+        }
+
+        &__item {
+            a {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 60%;
+                }
+            }
+        }
+
+        &__info {
+            margin-top: 50px;
+        }
+    }
+}
